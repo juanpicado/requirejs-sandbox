@@ -12,13 +12,14 @@ requirejs.config({
 });
 
 //Start the main app logic.
-requirejs(['jquery', 'app/sub'],
-function   ($,sub) {
+requirejs(['jquery', 'app/sub', 'app/eat'],
+function   ($,sub, eat) {
     //jQuery, canvas and the app/sub module are all
     //loaded and can be used here now.
 	console.log("SUB", sub);
 	console.log("$", $)
-	var x = sub;
+	var x = sub, f = eat;
 	console.log("SUB", x.color);
 	console.log("SUB", x.size);
+	console.log("SUB", f.correr);
 });
